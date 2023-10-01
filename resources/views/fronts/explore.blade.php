@@ -358,16 +358,17 @@
             <h2>Our Top Sellers This Week.</h2>
           </div>
         </div>
+        @foreach ($explores as $item)
         <div class="col-lg-3 col-sm-6">
           <div class="row">
             <div class="col-lg-12">
               <div class="item">
-                <h4>1.</h4>
+                <h4>{{ $item->id }}.</h4>
                 <img src="assets/images/author.jpg" alt="" style="max-width: 50px; max-height: 50px; border-radius: 50%;">
-                <h6>NFT Top Artist<br><a href="#">8.6 ETH or $12,000</a></h6>
+                <h6>{{ $item->title }}<br><a href="#">{{ $item->descriptions }}</a></h6>
               </div>
             </div>
-            <div class="col-lg-12">
+            {{-- <div class="col-lg-12">
               <div class="item">
                 <h4>2.</h4>
                 <img src="assets/images/author-02.jpg" alt="" style="max-width: 50px; max-height: 50px; border-radius: 50%;">
@@ -380,10 +381,13 @@
                 <img src="assets/images/author-03.jpg" alt="" style="max-width: 50px; max-height: 50px; border-radius: 50%;">
                 <h6>Johnny Mayson<br><a href="#">6.2 ETH or $26,000</a></h6>
               </div>
-            </div>
+            </div> --}}
           </div>
         </div>
-        <div class="col-lg-3 col-sm-6">
+        @endforeach
+
+
+        {{-- <div class="col-lg-3 col-sm-6">
           <div class="row">
             <div class="col-lg-12">
               <div class="item">
@@ -457,7 +461,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>

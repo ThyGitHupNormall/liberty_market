@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\HomeBController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeBController;
+use App\Http\Controllers\ExploreController;
 
 
 /*
@@ -20,9 +21,7 @@ Route::get('/',[HomeController::class, 'Home']);
 Route::get('/index',[HomeController::class, 'Home']);
 
 Route::get('/createnft',[HomeController::class, 'CeateNFT']);
-Route::get('/explore', function () {
-    return view('fronts.explore');
-});
+Route::get('/explore',[ExploreController::class, 'Explore']);
 Route::get('/details', function () {
     return view('fronts.details');
 });
